@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @auto.modelo %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @auto.color %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @auto.year %>
+</p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @auto.marca_id %>
+</p>
+
+<%= link_to 'Edit', edit_auto_path(@auto) %> |
+<%= link_to 'Back', autos_path %>

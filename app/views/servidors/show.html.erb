@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Noms:</strong>
+  <%= @servidor.noms %>
+</p>
+
+<p>
+  <strong>Dirip:</strong>
+  <%= @servidor.dirip %>
+</p>
+
+<%= link_to 'Edit', edit_servidor_path(@servidor) %> |
+<%= link_to 'Back', servidors_path %>

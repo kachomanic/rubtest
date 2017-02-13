@@ -1,0 +1,45 @@
+<%= form_for(auto) do |f| %>
+  <% if auto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(auto.errors.count, "error") %> prohibited this auto from being saved:</h2>
+
+      <ul>
+      <% auto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :modelo %>
+    <%= f.text_field :modelo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+  </div>
+
+  <div class="field">
+    <%= f.label :year %>
+    <%= f.number_field :year %>
+  </div>
+<!--
+  <div class="field">
+    <%= f.label :marca_id %>
+    <%= f.number_field :marca_id %>
+  </div>
+-->
+  <div class="control-group">
+	<%= f.label :marca_id, class: 'control-group' %>
+	<div class="controls">
+	<%= collection_select( :auto, :marca_id, Marca.all, :id, :name, {}, { :multiple => false  } ) %>
+	</div>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
