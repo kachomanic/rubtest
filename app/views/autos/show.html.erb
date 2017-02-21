@@ -17,7 +17,8 @@
 
 <p>
   <strong>Marca:</strong>
-  <%= @auto.marca_id %>
+  <!--<%= @auto.marca_id %>-->
+      <%= @auto.marca.name %>
 </p>
 
 <%= link_to 'Edit', edit_auto_path(@auto) %> |
