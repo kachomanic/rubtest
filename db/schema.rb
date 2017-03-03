@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170213031511) do
+ActiveRecord::Schema.define(version: 20170303212500) do
 
   create_table "autos", force: :cascade do |t|
     t.string   "modelo"
@@ -24,12 +24,22 @@ ActiveRecord::Schema.define(version: 20170213031511) do
   create_table "equipos", force: :cascade do |t|
     t.string   "nomequip"
     t.string   "descripcion"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "encrypted_message"
   end
 
   create_table "marcas", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "people", force: :cascade do |t|
+    t.string   "name"
+    t.string   "lastname"
+    t.integer  "age"
+    t.string   "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -46,8 +56,9 @@ ActiveRecord::Schema.define(version: 20170213031511) do
   create_table "servidors", force: :cascade do |t|
     t.string   "noms"
     t.string   "dirip"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "encrypted_password"
   end
 
 end

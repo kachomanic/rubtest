@@ -10,5 +10,12 @@
   <%= @servidor.dirip %>
 </p>
 
+<p>
+  <strong>Password:</strong>
+  <%= @servidor.decrypt_password %>
+</p>
+
+
+
 <%= link_to 'Edit', edit_servidor_path(@servidor) %> |
 <%= link_to 'Back', servidors_path %>

@@ -69,6 +69,6 @@ class ServidorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def servidor_params
-      params.require(:servidor).permit(:noms, :dirip)
+      params.require(:servidor).permit(:noms, :dirip, :password)
     end
 end

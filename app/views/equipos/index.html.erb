@@ -1,13 +1,13 @@
-<p id="notice"><%= notice %></p>
+ <p id="notice"><%= notice %></p>
 
 <h1>Equipos</h1>
 
-<table>
+<table id="equipos">
   <thead>
     <tr>
       <th>Nomequip</th>
       <th>Descripcion</th>
-      <th colspan="3"></th>
+      <th>Acciones</th>
     </tr>
   </thead>
 
@@ -16,9 +16,10 @@
       <tr>
         <td><%= equipo.nomequip %></td>
         <td><%= equipo.descripcion %></td>
-        <td><%= link_to 'Show', equipo %></td>
-        <td><%= link_to 'Edit', edit_equipo_path(equipo) %></td>
-        <td><%= link_to 'Destroy', equipo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', equipo %>
+        <%= link_to 'Edit', edit_equipo_path(equipo) %>
+        <%= link_to 'Destroy', equipo, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>

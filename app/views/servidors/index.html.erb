@@ -7,6 +7,7 @@
     <tr>
       <th>Noms</th>
       <th>Dirip</th>
+      <th>Password</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= servidor.noms %></td>
         <td><%= servidor.dirip %></td>
+        <td><%= servidor.password %></td>   
         <td><%= link_to 'Show', servidor %></td>
         <td><%= link_to 'Edit', edit_servidor_path(servidor) %></td>
         <td><%= link_to 'Destroy', servidor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
